@@ -1,0 +1,211 @@
+/* ASTRA EDITION — editorial skin. Original layout, content and scripts retained. */
+:root{
+ --ink:#181818;--text:#292929;--muted:#6b6764;--line:#c8c2bd;--line2:#e7e2dd;
+ --paper:#fffefa;--wash:#f4f1ec;--chap:#991c30;
+ --si:#202020;--si-t:#f1efea;--na:#a31930;--na-t:#f8edef;
+ --beu:#3e5054;--beu-t:#edf1f1;--ro:#635443;--ro-t:#f3f0e9;
+ --hw:#202020;--hw-t:#efede9;--hs:#89632f;--hs-t:#f4ede1;--hs-l:#daceb9;
+ --serif:"Hahmlet","Noto Serif KR","Batang",serif;
+ --sans:"IBM Plex Sans KR","Malgun Gothic",sans-serif;
+ --editorial-red:#a31930;
+}
+body{background:var(--paper);font-weight:400;letter-spacing:-.018em;line-height:1.85}
+::selection{background:#a31930;color:#fff}
+a{transition:color .2s,background .2s,border-color .2s}
+:focus-visible{outline:2px solid var(--editorial-red);outline-offset:4px;border-radius:0}
+/* The original fixed rail and its mobile bottom placement are retained. */
+.rail{background:#191919;border-right:0;padding-top:1.4rem;gap:.32rem}
+.rail .brand{color:#fff;font-weight:400;letter-spacing:-.05em;font-size:1.18rem;padding-bottom:1.05rem;margin-bottom:.6rem;border-bottom:1px solid #5b5652;width:4.4rem}
+.rail .brand small{font-family:Georgia,serif;font-style:italic;color:#bbb3aa;font-size:.7rem;margin-top:.65rem;letter-spacing:.015em}
+.rail hr{border-color:#504b47}
+.tile{border-radius:0;border:0;position:relative;color:#bdb8b3;transition:background .2s}
+.tile b{color:#ece8e1!important;font-weight:400;font-size:1.8rem}
+.tile span{font-size:.75rem;letter-spacing:.025em;color:#c4bcb6}
+.tile.txt b{font-weight:500;font-size:.92rem}
+.tile:hover{background:#33302e}
+.tile.on{background:#f8f5ef;color:#191919}
+.tile.on::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--editorial-red)}
+.tile.on b,.tile.on span{color:#181818!important}
+.top{background:#fffefa;border-bottom:1px solid var(--ink)}
+.top a{font-weight:400;letter-spacing:-.06em}
+.top span{font-size:.8rem;letter-spacing:.08em;color:var(--editorial-red)}
+/* Original cover: four linked letters, rising on a musical staff. */
+.hero{padding-top:2.2rem;padding-bottom:2.6rem;border-bottom:3px double var(--ink);position:relative}
+.hero .kick,.hero .kicker{color:var(--ink);font-size:.8rem;letter-spacing:.12em;border-top:2px solid var(--ink);border-bottom:1px solid var(--ink);padding:.7rem 0;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.hero .kick::after,.hero .kicker::after{content:"2026 학교예술교육";font:italic .8rem Georgia,serif;letter-spacing:.05em;white-space:nowrap;color:var(--editorial-red)}
+.staff{background-image:linear-gradient(#cec7bf,#cec7bf),linear-gradient(#e4ddd5,#e4ddd5),linear-gradient(#e4ddd5,#e4ddd5),linear-gradient(#e4ddd5,#e4ddd5),linear-gradient(#cec7bf,#cec7bf);margin-top:2rem;margin-bottom:1.8rem}
+.note-g,.staff>.note{position:relative}
+.note-g .gl,.staff .note .gl{font-weight:400;color:var(--ink);letter-spacing:-.09em;text-shadow:2px 2px 0 var(--paper)}
+.note-g.n2 .gl,.staff .note.n2 .gl{color:var(--editorial-red)}
+.note-g .gs,.staff .note .gloss{font-size:.85rem;letter-spacing:.035em;color:#514b45;background:var(--paper);padding-right:.3rem}
+.note-g .gq{color:var(--editorial-red);font-size:.8rem;line-height:1.6;background:var(--paper)}
+.note-g:hover .gl{color:var(--editorial-red)}
+.hero h1{font-weight:400!important;font-size:clamp(1.8rem,3.6vw,3rem);line-height:1.5;letter-spacing:-.065em;color:var(--ink)}
+.hero .sub{font-family:Georgia,var(--serif);font-weight:400!important;color:var(--editorial-red);font-size:1.1rem;letter-spacing:.08em;margin-top:.8rem}
+.hero .tag{font-size:.875rem;color:var(--muted);max-width:48rem;line-height:1.8;margin-top:1.2rem}
+/* Serif headlines and book-like rules, keeping all original sections and grids. */
+.home-sec{border-color:var(--line);padding-top:2.8rem;padding-bottom:2.8rem}
+.bigq{font-family:var(--serif);font-weight:400;font-size:clamp(1.5rem,2.5vw,2rem);letter-spacing:-.045em;line-height:1.65;border-left:3px solid var(--editorial-red);padding-left:1.3rem}
+.bh{font-weight:500;font-size:clamp(1.45rem,2.8vw,2rem);line-height:1.55;letter-spacing:-.06em;border-top:2px solid var(--ink);padding-top:1.2rem}
+.bh small{font-family:var(--sans);font-weight:500;font-size:.8rem;letter-spacing:.1em;color:var(--editorial-red);margin-bottom:.6rem}
+.lede{line-height:1.95;color:#514c48}
+.note{color:var(--muted)}
+.room{padding-top:2.8rem}
+.rh{border-top:2px solid var(--ink);border-bottom:1px solid var(--ink);padding-top:1.6rem;padding-bottom:1.8rem}
+.rh .sq,.thead .sq{border-radius:0;background:transparent;color:var(--c);border:1px solid var(--c);font-weight:400;box-shadow:5px 5px 0 var(--ct)}
+.rh .lab,.thead .lab{letter-spacing:.08em;font-size:.85rem;font-weight:500}
+.rh h1{font-weight:400;font-size:clamp(1.8rem,3.4vw,2.7rem);letter-spacing:-.07em;line-height:1.45}
+.rh .q,.thead .q{border-left:1px solid var(--c);font-weight:400;font-style:normal;line-height:1.8}
+.rh dt,.meta dt{font-size:.8rem}
+.rh dd{font-weight:500}
+.rh2,.thead2{border-radius:0;border-top:2px solid var(--hs);border-bottom:1px solid var(--hs);background:var(--hs-t);box-shadow:none}
+.rh2 .sq,.thead2 .sq{border-radius:0;background:var(--hs);font-weight:400;letter-spacing:-.06em}
+.rh2 .panel,.thead2 .panel{border-radius:0;background:var(--hs-t)}
+.rh2 h1,.thead2 h3{font-weight:400;letter-spacing:-.055em}
+/* Controls stay in their original positions. The silhouette becomes editorial. */
+.seg button,.qrb,.go,.copy,.qrchip,.cal button,.days button,.eras button,.rupa-nav button,.stepnav button,.filt button,.lctl button{border-radius:0;letter-spacing:.015em}
+.seg{gap:.45rem}
+.seg button{padding:.48rem .85rem;font-size:.875rem;border-color:var(--line);background:transparent}
+.seg button.on{background:var(--ink);border-color:var(--ink);color:#fff}
+.seg button:hover{border-color:var(--ink)}
+.go{background:var(--ink);padding:.6rem 1.1rem;font-size:.875rem;font-weight:500;box-shadow:none}
+.go:hover,.copy:hover{background:var(--editorial-red);color:#fff}
+.go.c{background:var(--c)}
+.go.ghost{background:transparent;border-color:var(--ink);color:var(--ink)}
+.qrb{border-color:var(--ink);font-size:.875rem}
+.qrb:hover{background:var(--wash)}
+.chips li{border-radius:0;background:transparent;border-color:var(--line);font-size:.8rem}
+.cal{border-bottom:1px solid var(--ink)}
+.cal button.on{border-bottom-color:var(--editorial-red)}
+.days button.on,.rupa-nav button.on{background:var(--ink);border-color:var(--ink)}
+.eras button{border-top:2px solid var(--line);background:var(--paper)}
+.eras button.on{border-color:var(--c);background:var(--ct)}
+.filt{background:var(--paper);border-bottom:1px solid var(--ink);padding-top:.8rem;padding-bottom:.8rem}
+.filt button{background:transparent;border-color:var(--line);font-size:.875rem}
+.filt button.on{background:var(--ink);color:#fff}
+/* Rich original components, restyled consistently rather than removed. */
+.bar3,.plat,.pane,.plab,.builder,.bout,.actp,.dcard,.cases article,.kw article,.dil>div,.dilemma,.bx,.bxb,details.info,details.fold{border-radius:0;box-shadow:none}
+.bar3{background:var(--paper);border:1px solid var(--line);border-top:3px solid var(--c);padding:1.25rem}
+.bar3 .k{font-weight:500;letter-spacing:.06em;font-size:.8rem}
+.bar3 .v{font-weight:500;font-size:1.25rem;line-height:1.6}
+.bar3 .to{border-top:1px solid var(--line);font-size:.875rem}
+.bar3 .to i{border-radius:0;font-weight:400}
+.ring b{font-family:Georgia,serif;font-size:1.5rem;font-weight:400}
+.ring svg circle:first-child{stroke:#e5e0da}
+.proc .steps{border-radius:0;border-top:2px solid var(--ink);border-bottom:1px solid var(--ink)}
+.proc .steps h4{font-weight:500;font-size:1.2rem;line-height:1.6}
+.proc .foot div{border-radius:0;border-left:2px solid var(--c)}
+.plat{border:1px solid var(--line);border-top:2px solid var(--ink);background:var(--paper);padding:1.25rem;transition:border-color .2s,box-shadow .2s}
+.plat:hover{border-color:var(--c);box-shadow:4px 4px 0 var(--ct)}
+.plat h4{font-weight:500;line-height:1.65;font-size:1.15rem}
+.plat .tagl{font-size:.75rem;letter-spacing:.07em;text-transform:uppercase}
+.plat .u{color:var(--muted)}
+.plat .qrv{border-radius:0;background:var(--paper)}
+.pane{border-top:2px solid var(--c);padding:1.4rem;background:var(--paper)}
+.pane h3{font-weight:500;line-height:1.6}
+.rupa-p .ex,.era-out>div,.era-out>div+div{border-radius:0;border-left:2px solid var(--c)}
+.rupa-nav button b{font-weight:400;font-size:1.8rem}
+.plab{border-top:2px solid var(--ink)}
+.lab-top{background:var(--wash);border-bottom:1px solid var(--ink)}
+.cell h4{font-weight:500;line-height:1.65}
+.cell .txt{border-radius:0;background:var(--wash);line-height:1.85}
+.bform fieldset{border-radius:0;border-color:var(--line)}
+.bform legend{font-family:var(--serif);font-weight:500}
+.bform input[type=text],.bform textarea,.bform select,.cfg input{border-radius:0;border-color:#ada59c;background:var(--paper);font-size:1rem}
+.bform input:focus,.bform textarea:focus,.cfg input:focus{outline-color:var(--editorial-red)}
+.pbox{border-radius:0;background:var(--wash);border-left:3px solid var(--c)}
+.meter .lv3 span,.meter .found span{border-radius:0}
+.actp{border-top:2px solid var(--c);background:var(--paper)}
+.actp .no{font-family:Georgia,serif;font-weight:400}
+.fields a,.fields li{border-radius:0;background:var(--paper);border-top:2px solid var(--line)}
+.fields a:hover{border-color:var(--c);background:var(--ct)}
+.fields .k{font-family:Georgia,serif;font-size:1.1rem;font-weight:400}
+.fields b{font-weight:500}
+.calc{border-radius:0;background:var(--wash)}
+.dcard{border-top:2px solid var(--ink);background:var(--wash)}
+.dcard h3{font-weight:500}
+.dcard .d{font-family:Georgia,serif;font-weight:400}
+.kw article{border-top:2px solid var(--ink);background:var(--paper)}
+.kw .w{font-family:var(--serif);font-weight:400;color:var(--editorial-red)}
+.honest>div{border-radius:0;background:var(--wash)}
+.bx{border:1px solid var(--hs-l);border-top:2px solid var(--hs);background:var(--paper)}
+.bx>h3{background:var(--hs-t);font-weight:500;letter-spacing:-.03em}
+.bx .st,.ev .st,.phases .st{border-radius:0;font-weight:500}
+.cfg pre,pre.json{border-radius:0;background:#232326;color:#e5e0d7}
+.cfg .flow3 span{border-radius:0}
+.cases article{border-top:2px solid var(--hs);background:var(--hs-t)}
+.cases h4{font-weight:500}
+.chain li{border-radius:0}
+/* Photographs remain full colour; no source image is cropped or replaced. */
+.zoom,.yt,.ytf,.lv,.ifr-lite,video.mv{border-radius:0}
+.zoom{background:#f0ece7}
+.zoom img{transition:filter .25s;filter:saturate(.88)}
+.zoom:hover img{filter:saturate(1.08)}
+.strip figcaption,.grid figcaption,.arch figcaption,.gal figcaption{font-size:.8rem;line-height:1.7;padding:.45rem 0;border-bottom:1px solid var(--line2);color:var(--muted)}
+.arch figure{background:var(--paper);border-radius:0}
+.yt .pl,.ifr-lite .pl{border-radius:0;width:3.6rem;height:3.6rem}
+.yt .tt{font-family:var(--serif);font-weight:500}
+.pn{border-top:2px solid var(--ink)}
+.pn a b{font-family:var(--serif);font-weight:500;line-height:1.6}
+footer{background:#191919;color:#ddd6cd;border-top:4px solid var(--editorial-red)}
+footer b,footer a{color:#fff}
+dialog.lb{border-radius:0;background:#171717;color:#f7f4ee}
+.lb-cap{color:#ddd6cd}.lb-btn{border-radius:0;background:#fffefa;color:#181818}
+/* Full report receives the same art direction; tables and anchors stay intact. */
+.bar{background:rgba(255,254,250,.98);border-bottom:1px solid var(--ink);backdrop-filter:blur(8px)}
+.mark{font-weight:400;letter-spacing:-.05em}.mark i{font-family:var(--sans);font-size:.75rem;letter-spacing:.04em}
+.nav a{border-radius:0;font-size:.875rem}.nav a.on{background:var(--ink);color:white}
+.band{background:var(--wash)}
+.chap{border-bottom:2px solid var(--ink);padding-bottom:1rem}
+.chap .num{border-radius:0;background:var(--ink);font-weight:400;font-family:var(--serif)}
+.chap h2{font-weight:500;letter-spacing:-.05em}
+h3.sec{font-weight:500;letter-spacing:-.04em}h3.sec .n{border-radius:0;background:var(--ink)}
+h3.plain,h4,h5{font-weight:500}
+.thead{border-top:2px solid var(--c);padding-top:1.5rem;border-bottom:1px solid var(--line)}
+.thead h3{font-weight:400;letter-spacing:-.05em}
+thead th{background:#262323;color:#fff;font-weight:500}
+tbody th{background:var(--wash)}
+.tw,.steps4,.phases section,.weights>div,.dilemma header,.dilemma .fix,.ask,.fnote{border-radius:0}
+.steps4{border-top:2px solid var(--ink)}
+.phases section{border-top:2px solid var(--ink)}
+.ask{border-left:3px solid var(--editorial-red);font-weight:400}
+.call{border-radius:0;border-left:3px solid var(--editorial-red)}
+.tocbox{border-radius:0;border-top:2px solid var(--ink)}
+.points>li::before{font-family:Georgia,serif;font-weight:400;color:var(--editorial-red)}
+/* Small screens retain the original rail, single-column breakpoints and controls. */
+@media(max-width:860px){
+ .rail{padding:.35rem .5rem;border-top:1px solid #49433d;gap:.3rem}
+ .tile span{font-size:.75rem}.tile b{font-size:1.4rem}.tile.txt b{font-size:.875rem}
+ .tile.on::before{top:0;left:0;right:0;bottom:auto;width:auto;height:2px}
+ .hero{padding-top:1.6rem}.hero .kick::after,.hero .kicker::after{font-size:.65rem;letter-spacing:0}
+ .hero .kick,.hero .kicker{font-size:.7rem;letter-spacing:.03em}
+ .room{padding-top:1.5rem}.rh h1{font-size:1.9rem}
+}
+@media(max-width:600px){
+ .hero .kick::after,.hero .kicker::after{content:"예술 / 2026"}
+ .hero .kick,.hero .kicker{font-size:.7rem;gap:.3rem}
+ .hero h1{font-size:1.85rem;line-height:1.6}
+ .note-g .gl,.staff .note .gl{font-size:clamp(3.5rem,15vw,5.6rem)}
+ .note-g .gs,.staff .note .gloss{font-size:.75rem}
+ .note-g .gq{font-size:.75rem;line-height:1.45}
+ .staff{margin-top:1.3rem;margin-bottom:1.4rem}
+ .hero .tag{font-size:.875rem}.bigq{font-size:1.45rem;padding-left:.9rem}
+ .bh{font-size:1.5rem}.bar3{padding:1.1rem}.home-sec{padding-top:2rem;padding-bottom:2rem}
+ .rh h1{font-size:1.8rem}.rh .q{font-size:1rem}
+ .seg button,.days button,.eras button span,.rupa-nav button span,.qrb,.plat .row .go{font-size:.875rem}
+ .pane{padding:1rem}.plat h4{font-size:1.05rem}
+}
+@media(prefers-reduced-motion:reduce){a,.zoom img{transition:none}}
+@media print{.rail,.top,.bar{display:none}main{margin-left:0}body{background:#fff;color:#000}footer{background:white;color:black}.hero,.chap,.rh{break-inside:avoid}}
+
+/* Final contrast and narrow-rail refinements. */
+.rail .brand{font-size:1rem;width:4.6rem}
+.bx>h3{color:var(--ink)}
+
+.chap .num{color:#fffefa}
+/* Selected navigation: quiet underline on the continuous dark rail. */
+.tile.on{background:transparent;color:#fffefa}
+.tile.on b,.tile.on span{color:#fffefa!important}
+.tile.on::before{left:25%;right:25%;top:auto;bottom:2px;width:auto;height:2px;background:#bd4860}
+.tile:hover{background:#272323}
+@media(max-width:860px){.tile.on::before{left:22%;right:22%;top:auto;bottom:0;width:auto;height:2px}}
